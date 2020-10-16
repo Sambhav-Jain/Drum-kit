@@ -3,21 +3,33 @@ body{
     text-align:center;
     font-family: Arial, "Times New Roman", Serif;
     color:#ffffff;
+    min-height: 150vh;
 }
-  a{
-    color: #ffffff;
-    background-color:#000000;
-    text-decoration:none;
-  }
-  a:hover{
-    color:rgb(55,215,25);
-  }
+*{
+	outline: none;
+}
+a{
+	color: #ffffff;
+	background-color:#000000;
+	text-decoration:none;
+}
+a:hover{
+	color:rgb(55,215,25);
+}
 h1{
     font-size: 5rem;
     text-shadow: 3px 3px  #DA0463;
 }
 div{
     margin: 10% auto;
+}
+.drum-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/background.jpg");
+    border-radius: 10px;
 }
 #a{
     background-image: url("../images/bass-drum.jpeg");
@@ -32,11 +44,14 @@ div{
     background-image: url("../images/High-tom.jpg");
 }
 #g{
+    background-color: #fff;
     background-image: url("../images/low-tom.jpg");
+    background-position: center;
     background-repeat: no-repeat;
 }
 #h{
     background-image: url("../images/mid-tom.jpg");
+    background-position: center;
 }
 #j{
     background-image: url("../images/ride-cymbal.jpg");
@@ -50,13 +65,66 @@ footer{
     border: 10px solid #404B69;
     font-size: 5rem;
     font-weight: 900;
-    color: #DA0463;
+    color: #fd4454;
     text-shadow: 3px 0 white;
     border-radius: 55px;
     display: inline-block;
     width: 250px;
     height: 250px;
     text-align: center;
-    margin: 10px;
-    background-color: white;
+    margin: 2rem;
+    background-color: #293a99;
+    transition: 100ms ease-in-out;
   }
+.play:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgba(253, 68, 84,0.8);
+    color:rgb(41, 58, 153,0.7);
+}
+@media(max-width:850px){
+    .play {
+        border: 3px solid #404B69;
+        font-size: 3rem;
+        font-weight: 900;
+        text-shadow: 1px 0 white;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #g:hover, .play:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: rgba(253, 68, 84,0.8);
+        color:rgb(41, 58, 153,0.7);
+    }
+      #a{
+        background-image:none;    }
+    #s{
+        background-image:none;    }
+    #d{
+        background-image:none;}
+    #f{
+        background-image:none;  }
+    #g{
+        background-image:none;
+        background-color: #293a99;
+    }
+    #h{
+        background-image:none; }
+    #j{
+        background-image:none;
+    }
+    
+}
+@media(max-width:500px){
+    .play {
+        border: 2px solid #404B69;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 70px;
+        height: 70px;
+      }
+}
