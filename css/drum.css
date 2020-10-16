@@ -8,14 +8,6 @@ body{
 *{
 	outline: none;
 }
-a{
-	color: #ffffff;
-	background-color:#000000;
-	text-decoration:none;
-}
-a:hover{
-	color:rgb(55,215,25);
-}
 h1{
     font-size: 5rem;
     text-shadow: 3px 3px  #DA0463;
